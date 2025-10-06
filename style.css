@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  font-size: 38px;
+  font-weight: bold;
+  color: #b22222;
+  letter-spacing: 2px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.gallery .imagen {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  color: #b22222;
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: 'Dancing Script', cursive;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery .imagen:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.poema {
+  margin: 40px auto;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #444;
+  min-height: 250px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.contador {
+  margin: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #8b0000;
+  font-family: 'Great Vibes', cursive;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  background: #b22222;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.creditos {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffe4e1;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.corazon {
+  position: fixed;
+  color: red;
+  font-size: 20px;
+  animation: flotar 6s linear infinite;
+}
+
+@keyframes flotar {
+  0% {transform: translateY(0) scale(1); opacity: 1;}
+  100% {transform: translateY(-100vh) scale(1.5); opacity: 0;}
+}
+
+#musicaBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff4d6d;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#musicaBtn:hover {
+  transform: scale(1.1);
+}
